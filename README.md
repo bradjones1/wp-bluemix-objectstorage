@@ -20,7 +20,8 @@ environment without effort by the developer as it depends on services provided b
 
 ## Installation ##
 
-This plugin is built in to the WordPress boilerplate on Bluemix. It should require no effort on your half to work properly.
+* ***On a Bluemix app:*** This plugin is built in to the WordPress boilerplate on Bluemix. It should require no effort on your half to work properly.
+* ***In a different environment (e.g., SoftLayer):*** This plugin looks for Swift configuration inside of the `VCAP_SERVICES` environment variable, which contains a JSON object with service keys. You will need to emulate this default Bluemix behaviour in your application. One option would be to use [dockerize](https://github.com/jwilder/dockerize) to template a JSON file, and then load that file into the environment variable.
 
 You can access the settings page on the Object Storage option selection in the admin settings panel.
 
